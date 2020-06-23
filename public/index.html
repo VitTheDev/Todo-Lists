@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js" defer></script>
+    <title>Todo Lists</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- tasklist section -->
+      <h1 id="date-info">date info</h1>
+      <div id="list-container" class="list-container">
+        <div class="card start">
+          <h2>Ready to go</h2>
+          <ul id="not-started" class="task-list not-started"></ul>
+        </div>
+        <div class="card progress">
+          <h2>Almost there</h2>
+          <ul id="in-progress" class="task-list in-progress"></ul>
+        </div>
+        <div class="card finish">
+          <h2>DONE!!!</h2>
+          <ul id="finished" class="task-list finished"></ul>
+        </div>
+      </div>
+      <div class="form-container">
+        <!-- form section -->
+        <form id="task-form" class="task-form">
+          <h2 id="alert" class="alert">Javascript message goes here</h2>
+          <input id="task-name" type="text" placeholder="Create Task Here" />
+          <select id="select-urgency">
+            <option value="urgent">Do it now</option>
+            <option value="sharpish">You shoud do it soon</option>
+            <option value="whenever">Do it whenever</option>
+          </select>
+          <button>Add Task!</button>
+        </form>
+        <div class="database">
+          <button id="saveBtn" type="submit">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
